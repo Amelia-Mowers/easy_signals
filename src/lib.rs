@@ -106,6 +106,10 @@ impl SignalQueue {
             None
         }
     }
+    
+    fn is_empty(&self) -> bool {
+        self.signal_queue.borrow().is_empty()
+    }
 }
 
 #[cfg(test)]
