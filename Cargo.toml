@@ -6,5 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-easy_self_referencing_objects = { path = "../easy_self_referencing_objects" }
-easy_events = { path = "../easy_events" }
+easy_self_referencing_objects  = { git = "https://github.com/Amelia-Mowers/easy_self_referencing_objects.git" }
+easy_events  = { git = "https://github.com/Amelia-Mowers/easy_events.git" }
