@@ -38,11 +38,11 @@ pub trait SignalSubject {
         }
     }
     fn get_signal_to_snapshot(&self, event: Rc<dyn Event>, targets: &Vec<Rc<RefCell<dyn SignalObserver>>>) -> SignalSnapShot {
-        let mut new_subs = self.copy_observers();
-        new_subs.append(&mut targets.clone());
+        let mut subs = self.copy_observers();
+        subs.append(&mut targets.clone());
         SignalSnapShot {
             event,
-            subs: new_subs
+            subs
         }
     }
 }
