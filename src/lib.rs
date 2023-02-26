@@ -200,13 +200,13 @@ mod tests {
     implement_signal_subject!(Subject, subs);
 
     struct EventA;
-    implement_event!(EventA);
+    implement_event!(EventA, "event_a");
 
     struct EventB;
-    implement_event!(EventB);
+    implement_event!(EventB, "event_b");
 
     struct EventC;
-    implement_event!(EventC);
+    implement_event!(EventC, "event_c");
 
     #[test]
     fn add_and_signal_observer() {
